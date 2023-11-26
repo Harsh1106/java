@@ -1,0 +1,4 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "C_Cpp.errorSquiggles": "disabled"
+}
