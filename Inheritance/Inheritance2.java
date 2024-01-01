@@ -20,6 +20,10 @@ class Human1
     void heapsort(){
         
     }
+
+    void insertionsort(){
+        
+    }
 }
 class Student extends Human1{ 
     // void sleep() // 2nd execution
