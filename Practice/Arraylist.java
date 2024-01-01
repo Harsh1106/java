@@ -6,22 +6,25 @@ import java.util.ArrayList;
 public class Arraylist {
     public static void main(String[] args) {
         ArrayList al = new ArrayList();
-        int capacity = getArrayListCapacity(al);
-        System.out.println("Initial Capacity: "+capacity);
         al.add(1);
         al.add(2);
         al.add(3);
         al.add(4);
         al.add(5);
         System.out.println(al);
+        int capacity = getArrayListCapacity(al);
         System.out.println("Initial Capacity: "+capacity);
     }
 
     private static int getArrayListCapacity(ArrayList al) {
         try{
             Field  field = ArrayList.class.getDeclaredField("elementData");
-            Object[] elementData = (Object[]) field.get(list);
+            field.setAccessible(true);
+            Object[] elementData = (Object[]) field.get(al);
+            return elementData.length;
+        }catch(NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+            return -1;
         }
-        return 0;
     }
 }
