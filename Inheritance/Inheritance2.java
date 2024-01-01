@@ -14,6 +14,9 @@ class Human1
         System.out.println("Human needs a good sleep");
         System.out.println(age);
     }
+    void bubblesort(){
+        
+    }
 }
 class Student extends Human1{ 
     // void sleep() // 2nd execution
