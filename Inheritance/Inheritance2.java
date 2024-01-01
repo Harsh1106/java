@@ -17,6 +17,9 @@ class Human1
     void bubblesort(){
         
     }
+    void heapsort(){
+        
+    }
 }
 class Student extends Human1{ 
     // void sleep() // 2nd execution
