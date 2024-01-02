@@ -24,6 +24,9 @@ class Human1
     void insertionsort(){
         
     }
+    void sort(){
+        
+    }
 }
 class Student extends Human1{ 
     // void sleep() // 2nd execution
