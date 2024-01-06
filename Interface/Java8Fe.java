@@ -4,6 +4,8 @@
 
 interface A
 {
+    // default method
+    void print();
     void show();
     default void config()
     {
@@ -17,8 +19,12 @@ interface A
 
 
 class B implements A{
+    // the inherited method should be public always.
     public void show(){
         System.out.println("In show.");
+    }
+    public void print(){
+        System.out.println("Print is in show");
     }
 }
 public class Java8Fe {
