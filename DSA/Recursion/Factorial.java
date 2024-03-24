@@ -1,12 +1,17 @@
-import java.util.Scanner;
+// TC: O(n) from recurrence relation
+// SC: O(n)
 
-public class Recursive {
+import java.util.*;
+
+public class Factorial {
     public static int factNum(int num){
-        int res;
+        int res = 0;
+        //1.base case condition
         if(num == 0 || num == 1){
             return 1;
         }else{
-            res = num * factNum(num - 1);
+            //2. Recursive function calling
+            res = num * factNum(num - 1); 
         }
         return res;
     }
