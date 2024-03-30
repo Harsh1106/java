@@ -7,6 +7,6 @@ public class TilingProblem {
         return getWays(n-1)+getWays(n-2);
     }
     public static void main(String[] args) {
-        System.out.println("For n = 1 total no of ways are "+getWays(11));
+        System.out.println("For n = 11 total no of ways are "+getWays(11));
     }
 }

@@ -25,8 +25,12 @@ public class PrintAllSequences {
         tempArr.remove(tempArr.size() - 1);
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
-        System.out.print("For the array - "+ Arrays.toString(arr));
-        printSequence(arr, 0, new ArrayList<>());
+        int[] arr1 = {1, 2};
+        System.out.println("For the array - "+ Arrays.toString(arr1));
+        printSequence(arr1, 0, new ArrayList<>());
+        System.out.println();
+        int[] arr2 = {1, 2, 3};
+        System.out.println("For the array - "+ Arrays.toString(arr2));
+        printSequence(arr2, 0, new ArrayList<>());
     }
 }
