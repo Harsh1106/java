@@ -44,12 +44,22 @@ public class PrefixSumConcept {
         result = sum - up - left + repeated_region;        
         return result;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[][] arr = {{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
+        int[][] arr = {{1,1,1,1},
+                       {1,1,1,1},
+                       {1,1,1,1},
+                       {1,1,1,1}};
         System.out.println("Enter the row1 and col1 value: ");
         int r1 = sc.nextInt();
         int c1 = sc.nextInt();
+        // if(r1 == 0 || c1 == 0){
+        //     System.out.println("Please enter greater then 0 value for r1 & c1.");
+        // }
+        // r1 = sc.nextInt();
+        // c1 = sc.nextInt();
+        
         System.out.println("Enter the row2 and col2 value: ");
         int r2 = sc.nextInt();
         int c2 = sc.nextInt();
