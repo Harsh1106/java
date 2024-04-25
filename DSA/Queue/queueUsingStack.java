@@ -19,7 +19,7 @@ public class queueUsingStack {
     static int deQueue(){
         int ele;
         if(stack1.empty() && stack2.empty()){
-            System.out.println("Stack is empty");
+            System.out.println("Queue is empty");
             System.exit(0);
         }
         // will push all elements from stack1 to stack2
@@ -29,8 +29,8 @@ public class queueUsingStack {
                 stack2.push(ele);
             }
         }
-
-        // pop the top element from the top of the stack
+        // pop the top element from the top of the stack2
+        // FIFO concept is applied  
         ele = stack2.pop();
         return ele;
     }
