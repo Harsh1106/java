@@ -1,5 +1,49 @@
 import java.util.*;
 public class largestRectangleHistogram {
+    // through stack
+    public static int getMaxArea(int[] arr, int n){
+        // TC: O(n)
+        Stack<Integer> s = new Stack<>();
+        int maxArea = 0;
+        int tp; //to store the top of the stack
+        int areaWithTop; //to store with top bar as the smallest bar
+
+        int i = 0;
+        while(i < n){
+            //if this bar is higher than the bar on top
+            // stack, push it to stack
+            if(s.empty() || arr[s.peek()] <= arr[i]){
+                s.push(i++);
+            }
+            else{
+                tp = s.peek(); //store the top index
+                s.pop(); //pop the top
+
+                // System.out.println("I: "+i);
+
+                areaWithTop = arr[tp] * (s.empty() ? i : i - s.peek() - 1);
+
+                // update max area, if needed
+                if(maxArea < areaWithTop){
+                    maxArea = areaWithTop;
+                }
+            }
+            while(s.empty() == false){
+                tp = s.peek();
+                s.pop();
+                areaWithTop = arr[tp] * (s.empty() ? i : i - s.peek() - 1);
+                if(maxArea < areaWithTop){
+                    maxArea = areaWithTop;
+                }
+            }
+        }
+        return maxArea;
+
+
+    }
+
+
+
     public static int largestRectangleArea(int[] height) {
         if (height == null || height.length == 0) {
             return 0;
@@ -43,7 +87,8 @@ public class largestRectangleHistogram {
         for(int i = 0 ; i < len ; i++){
             arr[i] = sc.nextInt();
         }
-        int max = largestRectangleArea(arr);
+        // int max = largestRectangleArea(arr);
+        int max = getMaxArea(arr, arr.length);
         System.out.println(max);
     }
 }

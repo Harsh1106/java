@@ -1,4 +1,4 @@
-public class ValidParenthesis {
+    public class ValidParenthesis {
 
     public static void printBal(int n, int oc, int cc, String ans){
         if(oc == n && cc == n){
