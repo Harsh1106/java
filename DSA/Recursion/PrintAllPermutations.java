@@ -31,7 +31,7 @@ public class PrintAllPermutations {
         System.out.println("For the string : "+str+" permutations are : ");
         permute(str, 0, n - 1); 
         System.out.println();       
-        String str1 = "ANUJ";
+        String str1 = "Harsh";
         int n2 = str1.length();
         System.out.println("For the string : "+str1+" permutations are : ");
         permute(str1, 0, n - 1);        
