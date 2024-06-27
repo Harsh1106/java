@@ -9,6 +9,7 @@ public class Merge{
     // r = right index
     public static void mergeProcedure(int[] arr, int l, int mid, int r){
         int i,j,k;
+        // to get number of elements from array: (r - l + 1) -> a general formula
         int n1 = mid - l + 1;//size of left subarray
         int n2 = r - mid; //size of right subarray
 
