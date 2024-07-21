@@ -31,12 +31,16 @@ public class findMaxAndMin {
 
         //2. big problem case will solve it using Divide and Conquer
         else{
-            //1. Divide 
+            //1. Divide - constant task
             int mid = i + (j - i)/2;
             //2. Conquer
+            // left side subtree - T(n/2)
+            // minmaxLeft = min(left), max(left)
             minmaxLeft = getMinMax(arr, i, mid);
+            // right side subtree - T(n/2)
+            // minmaxRight = min(right), max(right)
             minmaxRight = getMinMax(arr, mid + 1, j);
-            //3. Combine
+            //3. Combine - constant task
             if(minmaxLeft.min < minmaxRight.min){
                 minmax.min = minmaxLeft.min;
             }
