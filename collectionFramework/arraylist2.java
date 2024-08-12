@@ -30,8 +30,14 @@ public class arraylist2 {
         System.out.println(al);
 
 
-        List la = new ArrayList();
+        List<Integer> la = new ArrayList<>();
         la.add(100);
+        la.add(10);
+        la.add(1);
+        la.set(1, 200); //update the value at given index
+        la.add(1, 10); //add the value at given index
+        System.out.println(la);
+        la.remove(2);
         System.out.println(la);
     }
 }

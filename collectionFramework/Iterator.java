@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Iterator {
     public static void main(String[] args) {
-        ArrayList al = new ArrayList();
-        al.add(10);
-        al.add(20);
-        al.add(30);
-        al.add(40);
-        System.out.println(al);
+        // ArrayList al = new ArrayList();
+        // al.add(10);
+        // al.add(20);
+        // al.add(30);
+        // al.add(40);
+        // System.out.println(al);
 
 
         // loops r should not be used to fetch the data from collection bcoz if someone is try to modifying the data while loop then it will not consider and it will stuck in infinite loop
@@ -30,9 +30,24 @@ public class Iterator {
         // }
 
         // to fetch the data use cursor/iterator
-        Iterator itr = al.iterator();
-        while(itr.hasNext()){
-            itr.next();
+        // Iterator itr = al.iterator();
+        // while(itr.hasNext()){
+        //     itr.next();
+        // }
+
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Kiwi");
+        fruits.add("Papaya");
+        fruits.add("Mango");
+        fruits.add("Apple");
+
+        for(String fruit : fruits){
+            System.out.println(fruit);
+        }
+
+        Iterator<String> fe = fruits.listIterator();
+        while(fe.hasNext()){
+            System.out.println(fe.next());
         }
     }
 }
