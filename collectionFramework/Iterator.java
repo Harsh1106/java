@@ -45,9 +45,12 @@ public class Iterator {
             System.out.println(fruit);
         }
 
-        Iterator<String> fe = fruits.listIterator();
-        while(fe.hasNext()){
-            System.out.println(fe.next());
-        }
+        // Iterator<String> fe = fruits.iterator();
+        // while(fe.hasNext()){
+        //     System.out.println(fe.next());
+        // }
+
+        List<String> smallList = fruits.subList(0, 2);
+        System.out.println(smallList);
     }
 }
