@@ -5,7 +5,7 @@ public class priorityQueue {
         PriorityQueue pq = new PriorityQueue();
     // like ArrayList or LinkedList here we can't insert at any location or based on the index we can insert object only one after another 
     // not a heterogenous type
-    // didnot maintain order
+    // did'not maintain order
     // duplicate values are allowed
     // null values are also not allowed    
         pq.add(100);
