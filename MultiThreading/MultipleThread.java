@@ -11,6 +11,7 @@ class Calc extends Thread{
         System.out.println(res);
         System.out.println("Calculation Task Ended");
         System.out.println("******************************************");
+        sc.close();
     }
 }
 
